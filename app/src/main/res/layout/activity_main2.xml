@@ -68,6 +68,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/pol"
+        android:layout_below="@+id/showage"
+        android:hint=""
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
     <Button
         android:id="@+id/load"

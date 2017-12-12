@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rg)RadioGroup radiogrupa;
     @BindView(R.id.male)RadioButton m;
     @BindView(R.id.female)RadioButton f;
+    boolean pol = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +36,16 @@ public class MainActivity extends AppCompatActivity {
         Picasso.with(this).load(R.drawable.husky).centerInside().fit().into(pic);
 
 
+
     }
 
 
     @OnClick (R.id.savebtn)
     public void Save(){
         PreferencesManager.setFirstName(this, ime.getText().toString());
+        PreferencesManager.setLastName(this, prezime.getText().toString());
+        PreferencesManager.setAge(this, godini.getText().toString());
+        PreferencesManager.setPol(this,m.isChecked());
         Toast.makeText(this,"Done",Toast.LENGTH_LONG).show();
     }
 

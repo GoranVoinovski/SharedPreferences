@@ -24,4 +24,31 @@ public class PreferencesManager {
         getPreferences(context).edit().putString("firstname", firstName).apply();
 
     }
+
+    public static String getLastName(Context context){
+        return getPreferences(context).getString("lastname","No lastname");
+    }
+
+    public static void setLastName(Context context, String lastName){
+        getPreferences(context).edit().putString("lastname", lastName).apply();
+
+    }
+
+    public static String getAge(Context context){
+        return getPreferences(context).getString("age","");
+    }
+
+    public static void setAge(Context context, String age){
+        getPreferences(context).edit().putString("age", age).apply();
+
+    }
+
+    public static boolean getPol(Context context){
+        return getPreferences(context).getBoolean("gender",true);
+    }
+
+    public static void setPol(Context context, boolean masko){
+        getPreferences(context).edit().putBoolean("gender", masko).apply();
+
+    }
 }

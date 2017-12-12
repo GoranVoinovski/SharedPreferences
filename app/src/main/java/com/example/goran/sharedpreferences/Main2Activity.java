@@ -21,6 +21,7 @@ public class Main2Activity extends AppCompatActivity {
     @BindView(R.id.showfname)TextView pokaziime;
     @BindView(R.id.showlname)TextView pokaziprezime;
     @BindView(R.id.showage)TextView pokazigodini;
+    @BindView(R.id.pol)TextView pokazipol;
 
 
     @Override
@@ -39,6 +40,16 @@ public class Main2Activity extends AppCompatActivity {
     @OnClick(R.id.load)
     public void Save(){
         pokaziime.setText(PreferencesManager.getFirstName(this));
+        pokaziprezime.setText(PreferencesManager.getLastName(this));
+        pokazigodini.setText(PreferencesManager.getAge(this));
+        boolean pol = PreferencesManager.getPol(this);
+        if (pol){
+            pokazipol.setText("Male");
+        }else {
+
+            pokazipol.setText("Femle");
+        }
+
 
 
     }
