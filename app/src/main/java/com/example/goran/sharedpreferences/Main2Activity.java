@@ -39,15 +39,23 @@ public class Main2Activity extends AppCompatActivity {
 
     @OnClick(R.id.load)
     public void Save(){
-        pokaziime.setText(PreferencesManager.getFirstName(this));
-        pokaziprezime.setText(PreferencesManager.getLastName(this));
-        pokazigodini.setText(PreferencesManager.getAge(this));
-        boolean pol = PreferencesManager.getPol(this);
+//        pokaziime.setText(PreferencesManager.getFirstName(this));
+//        pokaziprezime.setText(PreferencesManager.getLastName(this));
+//        pokazigodini.setText(PreferencesManager.getAge(this));
+        //boolean pol = PreferencesManager.getPol(this);
+
+       User user = (User) PreferencesManager.getUser(this);
+       ime.setText(user.getName());
+       prezime.setText(user.getLastname());
+       godini.setText(user.getAge());
+        boolean pol = user.isMale();
+
+
         if (pol){
             pokazipol.setText("Male");
         }else {
 
-            pokazipol.setText("Femle");
+            pokazipol.setText("Female");
         }
 
 

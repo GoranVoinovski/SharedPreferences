@@ -42,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick (R.id.savebtn)
     public void Save(){
-        PreferencesManager.setFirstName(this, ime.getText().toString());
-        PreferencesManager.setLastName(this, prezime.getText().toString());
-        PreferencesManager.setAge(this, godini.getText().toString());
-        PreferencesManager.setPol(this,m.isChecked());
+        User user = new User(ime.getText().toString(), prezime.getText().toString(), godini.getText().toString(), m.isChecked());
+        PreferencesManager.addUser(user, this);
+//        PreferencesManager.setFirstName(this, ime.getText().toString());
+//        PreferencesManager.setLastName(this, prezime.getText().toString());
+//        PreferencesManager.setAge(this, godini.getText().toString());
+//        PreferencesManager.setPol(this,m.isChecked());
         Toast.makeText(this,"Done",Toast.LENGTH_LONG).show();
     }
 
