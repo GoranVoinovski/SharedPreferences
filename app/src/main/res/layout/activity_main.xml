@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.goran.sharedpreferences.MainActivity">
+
+  <ImageView
+      android:id="@+id/slika"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp"
+      android:layout_width="100dp"
+      android:layout_height="100dp" />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_below="@+id/slika"
+        android:hint="First name"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_below="@+id/fname"
+        android:hint="Last name"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_below="@+id/lname"
+        android:hint="Age"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_below="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:text="M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:text="F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_below="@+id/rg"
+        android:text="Save user details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/cntbtn"
+        android:layout_below="@+id/savebtn"
+        android:text="Continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
