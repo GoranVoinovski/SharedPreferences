@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -45,6 +46,7 @@ public class Main2Activity extends AppCompatActivity {
         //boolean pol = PreferencesManager.getPol(this);
 
        User user = (User) PreferencesManager.getUser(this);
+       if (user != null){
        ime.setText(user.getName());
        prezime.setText(user.getLastname());
        godini.setText(user.getAge());
@@ -56,7 +58,11 @@ public class Main2Activity extends AppCompatActivity {
         }else {
 
             pokazipol.setText("Female");
-        }
+        }}else {
+
+           Toast.makeText(this, "No user", Toast.LENGTH_LONG).show();
+
+       }
 
 
 
